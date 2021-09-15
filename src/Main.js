@@ -7,7 +7,7 @@ class Main extends Component {
     return (
       <>
         <HornedBeast title={'Name'} imgURL={name} decriptio={'Descriptive block'} />
-        <HornedBeast title={'Scratchy'}
+        <HornedBeast title={'Title'}
       </>
     )
   }
