@@ -2,6 +2,10 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+
+## Project Description:
+This project is an introduction to making a REACT app that render two images of a hroned beast, utilizing NODEJS configurations and components. 
+
 ## Available Scripts
 
 In the project directory, you can run:
