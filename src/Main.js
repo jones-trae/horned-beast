@@ -6,7 +6,7 @@ class Main extends Component {
   render () {
     return (
       <>
-        <HornedBeast title={'Name'} imgURL={name} decriptio={'Descriptive block'} />
+        <HornedBeast title={'Rhino'} imgURL={name} decription={'Descriptive block'} />
         <HornedBeast title={'Title'}
       </>
     )
