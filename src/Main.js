@@ -1,9 +1,9 @@
 import { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Container from 'react-bootstrap/Container'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
-import Image from 'react-bootstrap/Image'
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Image from 'react-bootstrap/Image';
 
 class Main extends Component {
   render() {
@@ -35,7 +35,7 @@ class BeastImage extends Component {
     super(props);
     this.state = {
       votes: 0
-    }
+    };
   }
 
   handleClick = (event) => {
@@ -51,7 +51,7 @@ class BeastImage extends Component {
         <Image onClick={this.handleClick} src={this.props.bio.image_url} alt="some horned beast" rounded fluid />
         <h3>{this.state.votes}❤</h3>
       </div>
-    )
+    );
   }
 }
 

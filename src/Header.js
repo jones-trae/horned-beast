@@ -1,8 +1,8 @@
-import { Component } from 'react'
-import Navbar from 'react-bootstrap/Navbar'
-import Container from 'react-bootstrap/Container'
+import { Component } from 'react';
+import Navbar from 'react-bootstrap/Navbar';
+import Container from 'react-bootstrap/Container';
 
-export default class Header extends Component {
+class Header extends Component {
 
   render() {
     return (
@@ -16,6 +16,6 @@ export default class Header extends Component {
 
     );
   }
-}
+};
 
-
+export default Header;
