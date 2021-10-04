@@ -1,50 +1,57 @@
-import logo from './logo.svg';
+import {Component} from 'react';
 import './App.css';
 // import React from 'React';
-import Header from './Header.js';
-import Main from './Main.js';
-import Footer from './Footer.js';
+import Header from './components/Header.js';
+import Main from './components/Main.js';
+import Footer from './components/Footer.js';
+import rawData from './beastObjects.json';
+import BeastModal from './components/BeastModal';
+import {Container} from 'react-bootstrap';
+
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      selectedBeast: {},
+      showModal: false,
+      allBeasts: rawData,
+    };
+  }
 
 
-function App() {
-  let beasts = [{
-    "image_url": "http://3.bp.blogspot.com/_DBYF1AdFaHw/TE-f0cDQ24I/AAAAAAAACZg/l-FdTZ6M7z8/s1600/Unicorn_and_Narwhal_by_dinglehopper.jpg",
-    "title": "UniWhal",
-    "description": "A unicorn and a narwhal nuzzling their horns",
-    "keyword": "narwhal",
-    "horns": 1
-  },
+  displayAsModal = name => {
+    const clickedBeast = rawData.find(beast => beast.title === name);
+    this.setState({ showModal: true, selectedBeast: clickedBeast });
+  };
 
-  {
-    "image_url": "https://images.unsplash.com/photo-1512636618879-bbe79107e9e3?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=bd9460ee6d1ddbb6b1ca7be86dfc4590&auto=format&fit=crop&w=1825&q=80",
-    "title": "Rhino Family",
-    "description": "Mother (or father) rhino with two babies",
-    "keyword": "rhino",
-    "horns": 2
-  },
-  
-  {
-    "image_url": "https://www.dhresource.com/0x0s/f2-albu-g5-M00-1A-11-rBVaI1hsIIiALxKzAAIHjSU3VkE490.jpg/wholesale-halloween-costume-prop-unicorn.jpg",
-    "title": "Unicorn Head",
-    "description": "Someone wearing a creepy unicorn head mask",
-    "keyword": "unicorn", 
-    "horns": 1
-  }];
+  handleClose = () => {
+    this.setState({ showModal: false });
+  };
 
+  updateBeastGallery = filteredBeastArr => {
+    this.setState({ allBeasts: filteredBeastArr });
+  };
 
-function App() {
-  return (
-    // // <div className="App">
-    //   <header><h1>Horned Beast</h1>
-    //   </header>
-    // </div>
-    <div>
-      <Header title="Horned Beasts"/>
-      <Main items={beasts}/>
-      <Footer author="Valton Jones"/>
-
-    </div>
-  );
+  render() {
+    return (
+      <Container fluid>
+        <Header />
+        <Main
+          allBeasts={this.state.allBeasts}
+          displayAsModal={this.displayAsModal}
+          updateBeastGallery={this.updateBeastGallery}
+        />
+        <BeastModal
+          showModal={this.state.showModal}
+          selectedBeast={this.state.selectedBeast}
+          handleClose={this.handleClose}
+        />
+        <Footer />
+      </Container>
+    );
+  }
 }
 
 export default App;
+
+
