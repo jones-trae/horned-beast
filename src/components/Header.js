@@ -4,7 +4,7 @@ import Container from 'react-bootstrap/Container';
 
 class Header extends Component {
   render() {
-    return ( 
+    return (
       <Navbar bg='dark' variant='dark'>
         <Container>
           <Navbar.Brand>Horned Beasts</Navbar.Brand>
