@@ -6,6 +6,16 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Project Description:
 This project is an introduction to making a REACT app that render two images of a hroned beast, utilizing NODEJS configurations and components. 
 
+Number and name of feature: ______lab02__________________________
+
+Estimate of time needed to complete: ___4 hrs__
+
+Start time: ___last week__
+
+Finish time: _this week____
+
+Actual time needed to complete: __4 hrs___
+
 ## Available Scripts
 
 In the project directory, you can run:
