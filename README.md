@@ -77,7 +77,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 Number and name of feature: _____01 init___________________________
 
-Estimate of time needed to complete: __4 hrs___
+Estimate of time needed to complete: __5 hrs___
 
 Start time: __last week___
 
